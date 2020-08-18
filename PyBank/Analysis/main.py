@@ -58,6 +58,8 @@ print(f"Average change: ${Av_change:.2f}")
 print(f"Greatest increase in Profits: {incident_of_max_Num} (${max_Num:.2f})")
 print(f"Greatest decrease in Profits: {incident_of_min_Num} (${min_Num:.2f})")
 
+# Export to file
+
 # print(f"Greatest increase in Profits occurs in {incident_of_max_Num}")
 # print(f"Greatest decrease in Profits occurs in {incident_of_min_Num}")
 # print(f"Cum change in profit/Loss is {delta_Amt}")
