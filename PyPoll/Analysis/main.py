@@ -70,7 +70,7 @@ elif candidate4Votes > candidate1Votes and candidate2Votes and candidate3Votes:
     winner = "O'Tooley"
     winner_percentage = candidate4percent
 
-# # QC statements
+# # PyPoll_Results
 print("Election Results")
 print("----------------------------------------- ")
 print(f"Candidate Correy finished with {candidate1Votes} which represents {candidate1percent:.0f}% of the votes")
@@ -79,9 +79,21 @@ print(f"Candidate Li finished with {candidate3Votes} which represents {candidate
 print(f"Candidate O'Tooley finished with {candidate4Votes} which represents {candidate4percent:.0f}% of the votes")
 print(f"The winner, with {winner_percentage:.0f}% of the votes is " + winner)
 
-CandidateSet = set(AllCandidates)
-print(candidate0Votes)
-print(len(AllCandidates))
-print(len(CandidateSet))
-print(CandidateSet)
-print(Total_votes)
+# Export to file
+text_file = open("PyPoll_Results.txt", "w")
+text_file.write("Election Results \n")
+text_file.write("----------------------------------------- \n")
+text_file.write(str(f"Candidate Correy finished with {candidate1Votes} which represents {candidate1percent:.0f}% of the votes \n"))
+text_file.write(str(f"Candidate Khan finished with {candidate2Votes} which represents {candidate2percent:.0f}% of the votes \n"))
+text_file.write(str(f"Candidate Li finished with {candidate3Votes} which represents {candidate3percent:.0f}% of the votes \n"))
+text_file.write(str(f"Candidate O'Tooley finished with {candidate4Votes} which represents {candidate4percent:.0f}% of the votes \n"))
+text_file.write(str(f"The winner, with {winner_percentage:.0f}% of the votes is " + winner))
+text_file.close()
+
+# # QC Prints
+# CandidateSet = set(AllCandidates)
+# print(candidate0Votes)
+# print(len(AllCandidates))
+# print(len(CandidateSet))
+# print(CandidateSet)
+# print(Total_votes)

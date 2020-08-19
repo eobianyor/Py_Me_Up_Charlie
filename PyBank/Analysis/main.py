@@ -49,7 +49,7 @@ with open(budget_data_csv, 'r') as csv_file:
 Av_change = (delta_Amt/(monthCounter - 1))
 Av_PandL = (net_Amt/monthCounter)
 
-# QC statements
+# PyBank_Results
 print("Financial Analysis")
 print("----------------------------------------- ")
 print(f"Total no. of months: {monthCounter}")
@@ -59,8 +59,12 @@ print(f"Greatest increase in Profits: {incident_of_max_Num} (${max_Num:.2f})")
 print(f"Greatest decrease in Profits: {incident_of_min_Num} (${min_Num:.2f})")
 
 # Export to file
-
-# print(f"Greatest increase in Profits occurs in {incident_of_max_Num}")
-# print(f"Greatest decrease in Profits occurs in {incident_of_min_Num}")
-# print(f"Cum change in profit/Loss is {delta_Amt}")
-# print(f"Average profit/Loss is {Av_PandL}")
+text_file = open("PyBank_Results.txt", "w")
+text_file.write("Financial Analysis \n")
+text_file.write("----------------------------------------- \n")
+text_file.write(str(f"Total no. of months: {monthCounter} \n"))
+text_file.write(str(f"Cumulative total: ${net_Amt:.2f} \n"))
+text_file.write(str(f"Average change: ${Av_change:.2f} \n"))
+text_file.write(str(f"Greatest increase in Profits: {incident_of_max_Num} (${max_Num:.2f}) \n"))
+text_file.write(str(f"Greatest decrease in Profits: {incident_of_min_Num} (${min_Num:.2f}) "))
+text_file.close()
