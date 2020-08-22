@@ -1,5 +1,5 @@
 Election Results 
------------------------------------------ 
+------------------------------------------------------------------------- 
 Candidate Correy finished with 704200 which represents 20% of the votes 
 Candidate Khan finished with 2218231 which represents 63% of the votes 
 Candidate Li finished with 492940 which represents 14% of the votes 

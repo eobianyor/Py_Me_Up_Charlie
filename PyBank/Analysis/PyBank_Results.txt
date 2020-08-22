@@ -1,5 +1,5 @@
 Financial Analysis 
------------------------------------------ 
+----------------------------------------------------- 
 Total no. of months: 86 
 Cumulative total: $38382578.00 
 Average change: $-2315.12 

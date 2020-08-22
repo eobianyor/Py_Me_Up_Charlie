@@ -9,7 +9,7 @@ budget_data_csv = os.path.join('..', 'Resources', 'budget_data.csv')
 monthCounter = 0
 noOfMonths = 0
 net_Amt = 0
-delta_Amt = 0
+cum_delta_Amt = 0
 pl_Amt = 0
 max_Num = 0
 incident_of_max_Num = None
@@ -25,8 +25,8 @@ with open(budget_data_csv, 'r') as csv_file:
     pl_Amt = 867884
 
     for a,b in csv_reader:
-        # Calculate the cum change in profit/Loss  
-        delta_Amt = delta_Amt + (int(b) - pl_Amt)
+        # Calculate the cumulative change in profit/Loss  
+        cum_delta_Amt = cum_delta_Amt + (int(b) - pl_Amt)
         pl_Amt = int(b)
         
         # Get the month count  
@@ -46,12 +46,12 @@ with open(budget_data_csv, 'r') as csv_file:
             incident_of_min_Num = (a)
     
 # Calculate Average change
-Av_change = (delta_Amt/(monthCounter - 1))
+Av_change = (cum_delta_Amt/(monthCounter - 1))
 Av_PandL = (net_Amt/monthCounter)
 
 # PyBank_Results
 print("Financial Analysis")
-print("----------------------------------------- ")
+print("----------------------------------------------------- ")
 print(f"Total no. of months: {monthCounter}")
 print(f"Cumulative total: ${net_Amt:.2f}")
 print(f"Average change: ${Av_change:.2f}")
@@ -61,10 +61,26 @@ print(f"Greatest decrease in Profits: {incident_of_min_Num} (${min_Num:.2f})")
 # Export to file
 text_file = open("PyBank_Results.txt", "w")
 text_file.write("Financial Analysis \n")
-text_file.write("----------------------------------------- \n")
+text_file.write("----------------------------------------------------- \n")
 text_file.write(str(f"Total no. of months: {monthCounter} \n"))
 text_file.write(str(f"Cumulative total: ${net_Amt:.2f} \n"))
 text_file.write(str(f"Average change: ${Av_change:.2f} \n"))
 text_file.write(str(f"Greatest increase in Profits: {incident_of_max_Num} (${max_Num:.2f}) \n"))
 text_file.write(str(f"Greatest decrease in Profits: {incident_of_min_Num} (${min_Num:.2f}) "))
 text_file.close()
+
+# -------------------------------------------------------------------------------------------------
+# Export to file
+# create a path
+# PyBank_Results_txt = os.path.join('..', 'Resources', 'PyBank_Results2.txt')
+# with open(PyBank_Results_txt, 'w') as txt_file:
+    # txt_reader = txt.reader(txt_file)
+    # text_file = open("PyBank_Results.txt", "w")
+    # text_file.write("Financial Analysis \n")
+    # text_file.write("----------------------------------------- \n")
+    # text_file.write(str(f"Total no. of months: {monthCounter} \n"))
+    # text_file.write(str(f"Cumulative total: ${net_Amt:.2f} \n"))
+    # text_file.write(str(f"Average change: ${Av_change:.2f} \n"))
+    # text_file.write(str(f"Greatest increase in Profits: {incident_of_max_Num} (${max_Num:.2f}) \n"))
+    # text_file.write(str(f"Greatest decrease in Profits: {incident_of_min_Num} (${min_Num:.2f}) "))
+    # text_file.close()

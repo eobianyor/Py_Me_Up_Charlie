@@ -8,7 +8,6 @@ election_data_csv = os.path.join('..', 'Resources', 'election_data.csv')
 # initialize variables
 AllCandidates = list()
 CandidateSet = set()
-profitLoss = []
 Total_votes = 0
 candidate0Votes = 0
 candidate0percent = 0
@@ -28,8 +27,6 @@ with open(election_data_csv, 'r') as csv_file:
     csv_reader = csv.reader(csv_file, delimiter = ',')
 
     header = next(csv_reader)
-    # Seed profit/loss amount (pl_Amt) so it cancels out for line 1
-    pl_Amt = 867884
 
     for a, b, c in csv_reader:
         # Count candidate votes
@@ -70,9 +67,9 @@ elif candidate4Votes > candidate1Votes and candidate2Votes and candidate3Votes:
     winner = "O'Tooley"
     winner_percentage = candidate4percent
 
-# # PyPoll_Results
+# PyPoll_Results
 print("Election Results")
-print("----------------------------------------- ")
+print("------------------------------------------------------------------------- ")
 print(f"Candidate Correy finished with {candidate1Votes} which represents {candidate1percent:.0f}% of the votes")
 print(f"Candidate Khan finished with {candidate2Votes} which represents {candidate2percent:.0f}% of the votes")
 print(f"Candidate Li finished with {candidate3Votes} which represents {candidate3percent:.0f}% of the votes")
@@ -82,7 +79,7 @@ print(f"The winner, with {winner_percentage:.0f}% of the votes is " + winner)
 # Export to file
 text_file = open("PyPoll_Results.txt", "w")
 text_file.write("Election Results \n")
-text_file.write("----------------------------------------- \n")
+text_file.write("------------------------------------------------------------------------- \n")
 text_file.write(str(f"Candidate Correy finished with {candidate1Votes} which represents {candidate1percent:.0f}% of the votes \n"))
 text_file.write(str(f"Candidate Khan finished with {candidate2Votes} which represents {candidate2percent:.0f}% of the votes \n"))
 text_file.write(str(f"Candidate Li finished with {candidate3Votes} which represents {candidate3percent:.0f}% of the votes \n"))
@@ -90,6 +87,7 @@ text_file.write(str(f"Candidate O'Tooley finished with {candidate4Votes} which r
 text_file.write(str(f"The winner, with {winner_percentage:.0f}% of the votes is " + winner))
 text_file.close()
 
+# ------------------------------------------------------------------------------------------------------------------------------------
 # # QC Prints
 # CandidateSet = set(AllCandidates)
 # print(candidate0Votes)
