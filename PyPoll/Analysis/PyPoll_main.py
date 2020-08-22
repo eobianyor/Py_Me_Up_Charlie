@@ -76,16 +76,35 @@ print(f"Candidate Li finished with {candidate3Votes} which represents {candidate
 print(f"Candidate O'Tooley finished with {candidate4Votes} which represents {candidate4percent:.0f}% of the votes")
 print(f"The winner, with {winner_percentage:.0f}% of the votes is " + winner)
 
+
+
 # Export to file
-text_file = open("PyPoll_Results.txt", "w")
-text_file.write("Election Results \n")
-text_file.write("------------------------------------------------------------------------- \n")
-text_file.write(str(f"Candidate Correy finished with {candidate1Votes} which represents {candidate1percent:.0f}% of the votes \n"))
-text_file.write(str(f"Candidate Khan finished with {candidate2Votes} which represents {candidate2percent:.0f}% of the votes \n"))
-text_file.write(str(f"Candidate Li finished with {candidate3Votes} which represents {candidate3percent:.0f}% of the votes \n"))
-text_file.write(str(f"Candidate O'Tooley finished with {candidate4Votes} which represents {candidate4percent:.0f}% of the votes \n"))
-text_file.write(str(f"The winner, with {winner_percentage:.0f}% of the votes is " + winner))
-text_file.close()
+# create a path
+PyPoll_Results_txt = os.path.join('..', 'Resources', 'PyPoll_Results.txt')
+# Open text file and write
+with open(PyPoll_Results_txt, 'w') as text_file:
+    text_file.write("Election Results \n")
+    text_file.write("------------------------------------------------------------------------- \n")
+    text_file.write(str(f"Candidate Correy finished with {candidate1Votes} which represents {candidate1percent:.0f}% of the votes \n"))
+    text_file.write(str(f"Candidate Khan finished with {candidate2Votes} which represents {candidate2percent:.0f}% of the votes \n"))
+    text_file.write(str(f"Candidate Li finished with {candidate3Votes} which represents {candidate3percent:.0f}% of the votes \n"))
+    text_file.write(str(f"Candidate O'Tooley finished with {candidate4Votes} which represents {candidate4percent:.0f}% of the votes \n"))
+    text_file.write(str(f"The winner, with {winner_percentage:.0f}% of the votes is " + winner))
+    text_file.close()
+
+print("End of Script")
+
+# ------------------------------------------------------------------------------------------------------------------------------------
+# # Export to file (Option2)
+# text_file = open("PyPoll_Results.txt", "w")
+# text_file.write("Election Results \n")
+# text_file.write("------------------------------------------------------------------------- \n")
+# text_file.write(str(f"Candidate Correy finished with {candidate1Votes} which represents {candidate1percent:.0f}% of the votes \n"))
+# text_file.write(str(f"Candidate Khan finished with {candidate2Votes} which represents {candidate2percent:.0f}% of the votes \n"))
+# text_file.write(str(f"Candidate Li finished with {candidate3Votes} which represents {candidate3percent:.0f}% of the votes \n"))
+# text_file.write(str(f"Candidate O'Tooley finished with {candidate4Votes} which represents {candidate4percent:.0f}% of the votes \n"))
+# text_file.write(str(f"The winner, with {winner_percentage:.0f}% of the votes is " + winner))
+# text_file.close()
 
 # ------------------------------------------------------------------------------------------------------------------------------------
 # # QC Prints

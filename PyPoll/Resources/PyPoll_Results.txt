@@ -1,0 +1,7 @@
+Election Results 
+------------------------------------------------------------------------- 
+Candidate Correy finished with 704200 which represents 20% of the votes 
+Candidate Khan finished with 2218231 which represents 63% of the votes 
+Candidate Li finished with 492940 which represents 14% of the votes 
+Candidate O'Tooley finished with 105630 which represents 3% of the votes 
+The winner, with 63% of the votes is Khan

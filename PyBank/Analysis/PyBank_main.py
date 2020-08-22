@@ -59,28 +59,32 @@ print(f"Greatest increase in Profits: {incident_of_max_Num} (${max_Num:.2f})")
 print(f"Greatest decrease in Profits: {incident_of_min_Num} (${min_Num:.2f})")
 
 # Export to file
-text_file = open("PyBank_Results.txt", "w")
-text_file.write("Financial Analysis \n")
-text_file.write("----------------------------------------------------- \n")
-text_file.write(str(f"Total no. of months: {monthCounter} \n"))
-text_file.write(str(f"Cumulative total: ${net_Amt:.2f} \n"))
-text_file.write(str(f"Average change: ${Av_change:.2f} \n"))
-text_file.write(str(f"Greatest increase in Profits: {incident_of_max_Num} (${max_Num:.2f}) \n"))
-text_file.write(str(f"Greatest decrease in Profits: {incident_of_min_Num} (${min_Num:.2f}) "))
-text_file.close()
+# create a path
+PyBank_Results_txt = os.path.join('..', 'Resources', 'PyBank_Results.txt')
+#Open text file and write
+with open(PyBank_Results_txt, 'w') as text_file:
+    text_file.write("Financial Analysis \n")
+    text_file.write("----------------------------------------- \n")
+    text_file.write(str(f"Total no. of months: {monthCounter} \n"))
+    text_file.write(str(f"Cumulative total: ${net_Amt:.2f} \n"))
+    text_file.write(str(f"Average change: ${Av_change:.2f} \n"))
+    text_file.write(str(f"Greatest increase in Profits: {incident_of_max_Num} (${max_Num:.2f}) \n"))
+    text_file.write(str(f"Greatest decrease in Profits: {incident_of_min_Num} (${min_Num:.2f}) "))
+    text_file.close()
+
+
+print("End of Script")
+
+# -------------------------------------------------------------------------------------------------    
+# # Export to file (Option2)
+# text_file = open("PyBank_Results.txt", "w")
+# text_file.write("Financial Analysis \n")
+# text_file.write("----------------------------------------------------- \n")
+# text_file.write(str(f"Total no. of months: {monthCounter} \n"))
+# text_file.write(str(f"Cumulative total: ${net_Amt:.2f} \n"))
+# text_file.write(str(f"Average change: ${Av_change:.2f} \n"))
+# text_file.write(str(f"Greatest increase in Profits: {incident_of_max_Num} (${max_Num:.2f}) \n"))
+# text_file.write(str(f"Greatest decrease in Profits: {incident_of_min_Num} (${min_Num:.2f}) "))
+# text_file.close()
 
 # -------------------------------------------------------------------------------------------------
-# Export to file
-# create a path
-# PyBank_Results_txt = os.path.join('..', 'Resources', 'PyBank_Results2.txt')
-# with open(PyBank_Results_txt, 'w') as txt_file:
-    # txt_reader = txt.reader(txt_file)
-    # text_file = open("PyBank_Results.txt", "w")
-    # text_file.write("Financial Analysis \n")
-    # text_file.write("----------------------------------------- \n")
-    # text_file.write(str(f"Total no. of months: {monthCounter} \n"))
-    # text_file.write(str(f"Cumulative total: ${net_Amt:.2f} \n"))
-    # text_file.write(str(f"Average change: ${Av_change:.2f} \n"))
-    # text_file.write(str(f"Greatest increase in Profits: {incident_of_max_Num} (${max_Num:.2f}) \n"))
-    # text_file.write(str(f"Greatest decrease in Profits: {incident_of_min_Num} (${min_Num:.2f}) "))
-    # text_file.close()
