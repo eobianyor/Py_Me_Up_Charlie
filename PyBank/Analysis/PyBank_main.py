@@ -75,7 +75,7 @@ with open(PyBank_Results_txt, 'w') as text_file:
 
 print("End of Script")
 
-# -------------------------------------------------------------------------------------------------    
+# --------------------------------------------------------------------------------------------------    
 # # Export to file (Option2)
 # text_file = open("PyBank_Results.txt", "w")
 # text_file.write("Financial Analysis \n")
@@ -87,4 +87,4 @@ print("End of Script")
 # text_file.write(str(f"Greatest decrease in Profits: {incident_of_min_Num} (${min_Num:.2f}) "))
 # text_file.close()
 
-# -------------------------------------------------------------------------------------------------
+# --------------------------------------------------------------------------------------------------
